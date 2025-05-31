@@ -10,18 +10,7 @@ Este proyecto configura un nodo relay Tor usando Docker Compose con las siguient
 - **Ancho de banda limitado**: 512 KB/s sostenido, 1 MB/s burst
 - **Herramientas incluidas**: Nyx para monitoreo interno
 
-## Estructura del proyecto
-
-```
-tor-relay/
-├── docker-compose.yml    # Configuración de Docker Compose
-├── Dockerfile           # Imagen personalizada con Tor y Nyx
-├── torrc               # Configuración del relay Tor
-├── start-tor.sh        # Script de inicio
-├── setup.sh            # Script de preparación del entorno
-├── logs/               # Directorio para logs (se crea automáticamente)
-└── README.md           # Este archivo
-```
+![demo](./doc/Screenshot_2025-05-30_19-28-47.png)
 
 ## Instalación y uso
 
