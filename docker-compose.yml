@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  tor-relay:
+    build: .
+    container_name: tor-relay-coldav
+    restart: unless-stopped
+    ports:
+      - "9001:9001"
+      - "9030:9030"
+    volumes:
+      - tor_data:/var/lib/tor
+      - ./torrc:/etc/tor/torrc:ro
+      - ./logs:/var/log/tor
+    environment:
+      - TOR_NICKNAME=relaycoldav
+      - TOR_CONTACT_INFO=email@email.com
+    networks:
+      - tor-network
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - SETUID
+      - SETGID
+    user: "100:101" # tor user
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/run
+
+volumes:
+  tor_data:
+    driver: local
+
+networks:
+  tor-network:
+    driver: bridge
