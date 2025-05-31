@@ -11,13 +11,29 @@ echo "================================="
 
 # Verificar permisos de directorios
 echo "Verificando permisos de directorios..."
+
+# Verificar directorio de datos de Tor
+if [ ! -d /var/lib/tor ]; then
+    echo "Creando directorio /var/lib/tor..."
+    mkdir -p /var/lib/tor
+fi
+
 if [ ! -w /var/lib/tor ]; then
     echo "Error: No se puede escribir en /var/lib/tor"
+    echo "UID actual: $(id -u), GID actual: $(id -g)"
+    echo "Permisos de /var/lib/tor: $(ls -ld /var/lib/tor)"
     exit 1
+fi
+
+# Verificar directorio de logs
+if [ ! -d /var/log/tor ]; then
+    echo "Creando directorio /var/log/tor..."
+    mkdir -p /var/log/tor
 fi
 
 if [ ! -w /var/log/tor ]; then
     echo "Error: No se puede escribir en /var/log/tor"
+    echo "Permisos de /var/log/tor: $(ls -ld /var/log/tor)"
     exit 1
 fi
 

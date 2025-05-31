@@ -6,8 +6,8 @@ services:
     container_name: tor-relay-coldav
     restart: unless-stopped
     ports:
-      - "9001:9001"
-      - "9030:9030"
+      - "9001:9001" # Puerto OR (Onion Router)
+      - "9030:9030" # Puerto Dir (Directory)
     volumes:
       - tor_data:/var/lib/tor
       - ./torrc:/etc/tor/torrc:ro
@@ -24,10 +24,9 @@ services:
       - DAC_OVERRIDE
       - SETUID
       - SETGID
-    user: "100:101" # tor user
+    user: "1001:1001" # toruser
     security_opt:
       - no-new-privileges:true
-    read_only: true
     tmpfs:
       - /tmp
       - /var/run

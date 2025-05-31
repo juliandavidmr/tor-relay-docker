@@ -1,0 +1,58 @@
+May 31 00:03:10.000 [notice] Tor 0.4.5.16 opening new log file.
+May 31 00:03:10.947 [notice] We compiled with OpenSSL 101010ef: OpenSSL 1.1.1n  15 Mar 2022 and we are running with OpenSSL 1010117f: 1.1.1w. These two versions should be binary compatible.
+May 31 00:03:10.947 [notice] Tor 0.4.5.16 running on Linux with Libevent 2.1.12-stable, OpenSSL 1.1.1w, Zlib 1.2.11, Liblzma 5.2.5, Libzstd 1.4.8 and Glibc 2.31 as libc.
+May 31 00:03:10.947 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://support.torproject.org/faq/staying-anonymous/
+May 31 00:03:10.947 [notice] Read configuration file "/etc/tor/torrc".
+May 31 00:03:10.948 [notice] Based on detected system memory, MaxMemInQueues is set to 8192 MB. You can override this by setting MaxMemInQueues by hand.
+May 31 00:03:10.948 [warn] CookieAuthFileGroupReadable is set, but will have no effect: you must specify an explicit CookieAuthFile to have it group-readable.
+May 31 00:03:10.949 [notice] Opening Control listener on 127.0.0.1:9051
+May 31 00:03:10.949 [notice] Opened Control listener connection (ready) on 127.0.0.1:9051
+May 31 00:03:10.949 [notice] Opening OR listener on 0.0.0.0:9001
+May 31 00:03:10.949 [notice] Opened OR listener connection (ready) on 0.0.0.0:9001
+May 31 00:03:10.949 [notice] Opening OR listener on [::]:9001
+May 31 00:03:10.949 [notice] Opened OR listener connection (ready) on [::]:9001
+May 31 00:03:10.949 [notice] Opening Directory listener on 0.0.0.0:9030
+May 31 00:03:10.949 [notice] Opened Directory listener connection (ready) on 0.0.0.0:9030
+May 31 00:03:10.000 [warn] Your log may contain sensitive information - you're logging more than "notice". Don't log unless it serves an important reason. Overwrite the log afterwards.
+May 31 00:03:10.000 [notice] You are running a new relay. Thanks for helping the Tor network! If you wish to know what will happen in the upcoming weeks regarding its usage, have a look at https://blog.torproject.org/lifecycle-of-a-new-relay
+May 31 00:03:10.000 [notice] It looks like I need to generate and sign a new medium-term signing key, because I don't have one. To do that, I need to load (or create) the permanent master identity key. If the master identity key was not moved or encrypted with a passphrase, this will be done automatically and no further action is required. Otherwise, provide the necessary data using 'tor --keygen' to do it manually.
+May 31 00:03:11.000 [notice] Your Tor server's identity key  fingerprint is 'relaycoldav 83C27676E111C9623CFB772B93105326D88FE2F9'
+May 31 00:03:11.000 [notice] Your Tor server's identity key ed25519 fingerprint is 'relaycoldav 9zKSNVKy+xxeJf0f8xjLKcG6lriRYKfvnLdnGOcNaX4'
+May 31 00:03:11.000 [notice] Configured hibernation. This interval begins at 2025-04-30 00:00:00 and ends at 2025-04-30 00:00:00. We have no prior estimate for bandwidth, so we will start out awake and hibernate when we exhaust our quota.
+May 31 00:03:11.000 [notice] Configured hibernation. This interval begins at 2025-04-30 00:00:00 and ends at 2025-06-01 00:00:00. We have no prior estimate for bandwidth, so we will start out awake and hibernate when we exhaust our quota.
+May 31 00:03:11.000 [notice] Parsing GEOIP IPv4 file /usr/share/tor/geoip.
+May 31 00:03:11.000 [notice] Parsing GEOIP IPv6 file /usr/share/tor/geoip6.
+May 31 00:03:11.000 [notice] Configured to measure statistics. Look for the *-stats files that will first be written to the data directory in 24 hours from now.
+May 31 00:03:11.000 [notice] Bootstrapped 0% (starting): Starting
+May 31 00:03:11.000 [notice] Starting with guard context "default"
+May 31 00:03:12.000 [notice] Unable to find IPv4 address for ORPort 9001. You might want to specify IPv6Only to it or set an explicit address or set Address.
+May 31 00:03:12.000 [notice] Bootstrapped 5% (conn): Connecting to a relay
+May 31 00:05:13.000 [notice] Bootstrapped 10% (conn_done): Connected to a relay
+May 31 00:05:13.000 [notice] Bootstrapped 14% (handshake): Handshaking with a relay
+May 31 00:05:13.000 [notice] Bootstrapped 15% (handshake_done): Handshake with a relay done
+May 31 00:05:13.000 [notice] Bootstrapped 20% (onehop_create): Establishing an encrypted directory connection
+May 31 00:05:13.000 [notice] Bootstrapped 25% (requesting_status): Asking for networkstatus consensus
+May 31 00:05:14.000 [notice] Bootstrapped 30% (loading_status): Loading networkstatus consensus
+May 31 00:05:15.000 [notice] I learned some more directory information, but not enough to build a circuit: We have no usable consensus.
+May 31 00:05:15.000 [notice] Bootstrapped 40% (loading_keys): Loading authority key certs
+May 31 00:05:15.000 [notice] I learned some more directory information, but not enough to build a circuit: We have no usable consensus.
+May 31 00:05:15.000 [notice] The current consensus has no exit nodes. Tor can only build internal paths, such as paths to onion services.
+May 31 00:05:15.000 [notice] Bootstrapped 45% (requesting_descriptors): Asking for relay descriptors
+May 31 00:05:15.000 [notice] I learned some more directory information, but not enough to build a circuit: We need more microdescriptors: we have 0/8626, and can only build 0% of likely paths. (We have 0% of guards bw, 0% of midpoint bw, and 0% of end bw (no exits in consensus, using mid) = 0% of path bw.)
+May 31 00:05:16.000 [notice] We'd like to launch a circuit to handle a connection, but we already have 32 general-purpose client circuits pending. Waiting until some finish.
+May 31 00:05:16.000 [notice] Bootstrapped 50% (loading_descriptors): Loading relay descriptors
+May 31 00:05:17.000 [notice] The current consensus contains exit nodes. Tor can build exit and internal paths.
+May 31 00:05:19.000 [notice] Bootstrapped 55% (loading_descriptors): Loading relay descriptors
+May 31 00:05:20.000 [notice] Bootstrapped 60% (loading_descriptors): Loading relay descriptors
+May 31 00:05:20.000 [notice] Bootstrapped 65% (loading_descriptors): Loading relay descriptors
+May 31 00:05:20.000 [notice] Bootstrapped 70% (loading_descriptors): Loading relay descriptors
+May 31 00:05:21.000 [notice] Bootstrapped 75% (enough_dirinfo): Loaded enough directory info to build circuits
+May 31 00:05:22.000 [notice] Bootstrapped 80% (ap_conn): Connecting to a relay to build circuits
+May 31 00:05:22.000 [notice] Bootstrapped 85% (ap_conn_done): Connected to a relay to build circuits
+May 31 00:05:22.000 [notice] Bootstrapped 89% (ap_handshake): Finishing handshake with a relay to build circuits
+May 31 00:05:23.000 [notice] Bootstrapped 90% (ap_handshake_done): Handshake finished with a relay to build circuits
+May 31 00:05:23.000 [notice] Bootstrapped 95% (circuit_create): Establishing a Tor circuit
+May 31 00:05:24.000 [notice] Bootstrapped 100% (done): Done
+May 31 00:07:19.000 [warn] Please upgrade! This version of Tor (0.4.5.16) is obsolete, according to the directory authorities. Recommended versions are: 0.4.8.4,0.4.8.5,0.4.8.6,0.4.8.7,0.4.8.8,0.4.8.9,0.4.8.10,0.4.8.11,0.4.8.12,0.4.8.13,0.4.8.14,0.4.8.15,0.4.8.16,0.4.9.1-alpha
+May 31 00:07:19.000 [warn] Received http status code 404 ("Not found") from server 86.80.225.203:1080 while fetching "/tor/keys/fp/14C131DFC5C6F93646BE72FA1401C02A8DF2E8B4".
+May 31 00:07:27.000 [notice] New control connection opened from 127.0.0.1.
